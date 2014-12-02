@@ -30,6 +30,8 @@ public class Driver {
 		//work through the list of prime numbers
 		//to test the Secret function
 		for(Integer p: primes){
+			//break out of the loop if the current integer exceeds the test case
+			if(p>N){break;}
 			System.out.println(p);
 			
 			//check each tuple of prime numbers testing if secret(x+y) == secret(x) + secret(y)  
@@ -52,9 +54,9 @@ public class Driver {
 		}
 		//output to let the user know if the function was or was not Additive
 		if(isAdditive == true){
-			System.out.println("Secret is an additive function for prime integers up to "+primeNumber.getPrimeListUpperBound());
+			System.out.println("Secret is an additive function for prime integers up to "+N);
 		}else{
-			System.out.println("Secret is NOT an additive function for prime integers up to "+primeNumber.getPrimeListUpperBound());
+			System.out.println("Secret is NOT an additive function for prime integers up to "+N);
 		}
 		
 	}
