@@ -79,14 +79,14 @@ public class PrimeNumberGen {
 	
 	/**
 	 * returns the list of prime numbers
-	 * @return
+	 * @return vector<Integer> primeList
 	 */
 	public Vector<Integer> getPrimeNumbers(){
 		return firstInstance.primeList;
 	}
 	/**
 	 * returns upper bound for prime list
-	 * @return
+	 * @return int primeListUpperBound
 	 */
 	public int getPrimeListUpperBound(){
 		return primeListUpperBound;
