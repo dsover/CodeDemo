@@ -49,7 +49,7 @@ public class PrimeNumberGen {
 			int previousMax = primeListUpperBound;
 			primeListUpperBound = n;
 			System.out.println("Generating Prime Numbers up to " + n);
-
+			//start at previousMax to not duplicate calculations 
 			for(int i=previousMax; i<=n; i++){
 				//remove even number other than 2 because they are not prime by definition 
 				if((i == 2)||(!(i%2 ==0))){
