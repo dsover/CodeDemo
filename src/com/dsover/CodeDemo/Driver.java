@@ -40,15 +40,15 @@ public class Driver {
 					if(p2 != null){
 						int test1 = theSecret.secretFunction(p + p2);
 						int test2 = theSecret.secretFunction(p)+theSecret.secretFunction(p2);
-						//if the tuple not equal set the is aditive = false and break out of the loop
-						//there is no more reason to test the function is not Additive
+						//if the tuple not equal set the isAdditive = false 
 						if(test1!=test2){
 							isAdditive = false;
-							break;
 						}
 					}
 				}
 			}
+			//if isAdditive is false break out of the loop there is no more reason to test
+			if(isAdditive == false){break;}
 			//add the prime number to the used list because the program does not need to calculate that number any more
 			usedPrimes.add(p);
 		}
