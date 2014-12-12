@@ -10,7 +10,7 @@ import java.util.Vector;
 public class Driver {
 
 	public static void main(String[] args) {
-		int N = 100;//set this to the max bound integer for prime numbers
+		int N = 10;//set this to the max bound integer for prime numbers
 		boolean isAdditive = true;//flag to determine if the function was Additive
 		
 		
@@ -32,17 +32,19 @@ public class Driver {
 		for(Integer p: primes){
 			//break out of the loop if the current integer exceeds the test case
 			if(p>N){break;}
-			System.out.println(p);
+		//	System.out.println(p);
 			
 			//check each tuple of prime numbers testing if secret(x+y) == secret(x) + secret(y)  
 			for(Integer p2: primes){
-				if(p != p2 && !usedPrimes.contains(p2)){
+				if( !usedPrimes.contains(p2)){
+					System.out.println("p: "+p+"\tp2: "+p2);
 					if(p2 != null){
 						int test1 = theSecret.secretFunction(p + p2);
 						int test2 = theSecret.secretFunction(p)+theSecret.secretFunction(p2);
 						//if the tuple not equal set the isAdditive = false 
 						if(test1!=test2){
 							isAdditive = false;
+							break;
 						}
 					}
 				}
